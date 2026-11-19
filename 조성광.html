@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="赵圣光（조성광）的中韩双语个人作品集网站">
+<title>赵圣光 · 조성광 | 个人作品集</title>
+<style>
+:root{--cream:#f6f0e5;--paper:#fffdf8;--green:#173f32;--green2:#285a47;--sage:#dfe8dc;--orange:#c96d4c;--ink:#20352c;--muted:#68776d;--line:#d9dfd4;--shadow:0 18px 45px rgba(29,61,47,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,"Noto Sans SC","Malgun Gothic",sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(246,240,229,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(23,63,50,.12)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;color:var(--green);letter-spacing:.03em}.brand small{display:block;font-size:10px;letter-spacing:.12em;color:var(--muted);font-weight:600}
+nav{display:flex;gap:24px;font-size:13px;color:var(--green);font-weight:700}nav a:hover{color:var(--orange)}
+.lang{border:1px solid var(--green);background:transparent;color:var(--green);padding:8px 12px;border-radius:99px;cursor:pointer;font-weight:700}
+.hero{padding:76px 0 54px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:38px;min-height:580px}
+.eyebrow{color:var(--orange);font-size:12px;letter-spacing:.18em;font-weight:900;text-transform:uppercase}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.08;letter-spacing:-.05em;color:var(--green);margin:18px 0 8px}
+.korean-name{font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--green2);margin:0 0 22px}
+.lead{font-size:16px;color:#52675b;max-width:590px}
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0}.pill{background:#e6eadf;border:1px solid #d6dfd2;color:var(--green);padding:6px 12px;border-radius:99px;font-size:12px;font-weight:700}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:12px 19px;border-radius:99px;background:var(--green);color:white;font-weight:800;font-size:13px;border:1px solid var(--green);display:inline-block;cursor:pointer}.btn.secondary{background:transparent;color:var(--green)}
+.scene{position:relative;min-height:390px;display:grid;place-items:center;isolation:isolate}.scene:before{content:"";position:absolute;width:88%;height:78%;border-radius:48% 52% 42% 58%;background:#e6e9d9;z-index:-1;transform:rotate(-7deg)}
+.scene-card{width:min(100%,470px);background:rgba(255,253,248,.8);border:1px solid #e4e5d9;border-radius:28px;padding:18px;box-shadow:var(--shadow)}
+.scene-caption{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--muted);font-weight:700;padding:4px 8px 0}
+.scene-motion{will-change:transform;transition:transform .2s ease}
+.float-note{position:absolute;right:0;top:8%;background:#fffdf8;padding:10px 15px;border-radius:14px;box-shadow:var(--shadow);font-size:11px;color:var(--green);transform:rotate(5deg)}
+.pause{position:absolute;bottom:2%;left:2%;border:1px solid #cbd7c9;background:#fffdf8;color:var(--green);border-radius:99px;padding:8px 12px;font-size:11px;cursor:pointer}
+section{padding:76px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.section-head h2{margin:5px 0 0;color:var(--green);font-size:clamp(28px,4vw,40px);line-height:1.2}.section-head p{color:var(--muted);font-size:13px;margin:0}
+.about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--paper);border:1px solid #e6e5db;border-radius:22px;padding:26px;box-shadow:0 8px 28px rgba(29,61,47,.04)}
+.panel h3{margin:0 0 12px;color:var(--green);font-size:18px}.panel p{margin:0;color:#5d6c61;font-size:14px}
+.info-list{display:grid;grid-template-columns:110px 1fr;gap:10px 16px;font-size:14px}.info-list b{color:var(--green)}.info-list span{color:#596a5e}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{background:var(--paper);border:1px solid #e5e5da;border-radius:22px;padding:24px;box-shadow:0 8px 28px rgba(29,61,47,.04);display:flex;flex-direction:column;min-height:270px}
+.project .num{color:var(--orange);font-size:12px;font-weight:900;letter-spacing:.14em}.project h3{color:var(--green);font-size:20px;line-height:1.35;margin:13px 0 8px}.project p{font-size:13px;color:var(--muted);margin:0 0 18px}.project button{margin-top:auto;align-self:flex-start;border:0;background:var(--sage);color:var(--green);border-radius:99px;padding:9px 14px;font-weight:800;cursor:pointer}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.skill{padding:18px;border-radius:18px;background:#e5eadf;border:1px solid #d8e0d5;color:var(--green);font-weight:800;font-size:14px}.skill small{display:block;color:#65776a;font-weight:500;margin-top:5px}
+.timeline{border-left:2px solid #cbd9ca;margin-left:8px;padding-left:24px;display:grid;gap:20px}.timeline article{position:relative}.timeline article:before{content:"";position:absolute;left:-31px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--orange);border:3px solid var(--cream)}.timeline h3{margin:0;color:var(--green);font-size:16px}.timeline p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.contact-card{background:var(--green);color:#f8f3e9;border-radius:24px;padding:30px}.contact-card h3{font-size:24px;margin:0 0 10px}.contact-card p{color:#d5e0d4;font-size:14px}.contact-card a{display:inline-block;margin-top:12px;border-bottom:1px solid #b7c9b8;padding-bottom:3px}
+footer{padding:28px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:15px}
+.modal{position:fixed;inset:0;background:rgba(15,35,27,.55);display:none;place-items:center;padding:20px;z-index:50}.modal.show{display:grid}.modal-box{background:var(--paper);border-radius:22px;padding:28px;max-width:560px;width:100%;box-shadow:var(--shadow);position:relative}.modal-box h3{color:var(--green);margin:0 0 12px}.modal-box p{color:#596a5e;font-size:14px}.close{position:absolute;right:18px;top:14px;border:0;background:transparent;font-size:24px;cursor:pointer;color:var(--green)}
+.kr{display:none}.show-kr .cn{display:none}.show-kr .kr{display:initial}
+@media(max-width:800px){nav{gap:12px;font-size:11px}.hero{grid-template-columns:1fr;padding-top:50px}.scene{min-height:320px}.cards{grid-template-columns:1fr 1fr}.skill-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.nav{height:auto;padding:14px 0;flex-wrap:wrap}.nav nav{order:3;width:100%;justify-content:space-between}.hero{gap:10px}.about-grid,.contact-grid,.cards{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.scene{min-height:280px}.scene-card{padding:10px}.float-note{right:0}.skill-grid{grid-template-columns:1fr 1fr}section{padding:56px 0}footer{display:block}footer span{display:block;margin-top:5px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home">SG PORTFOLIO<small>조성광 · 赵圣光</small></a>
+  <nav>
+    <a href="#about"><span class="cn">关于我</span><span class="kr">소개</span></a>
+    <a href="#projects"><span class="cn">项目</span><span class="kr">프로젝트</span></a>
+    <a href="#skills"><span class="cn">技能</span><span class="kr">역량</span></a>
+    <a href="#activities"><span class="cn">学习活动</span><span class="kr">활동</span></a>
+    <a href="#contact"><span class="cn">联系</span><span class="kr">연락</span></a>
+  </nav>
+  <button class="lang" id="langBtn" type="button">한국어</button>
+</div></header>
+
+<main>
+<section class="wrap hero" id="home">
+  <div>
+    <div class="eyebrow">MY PORTFOLIO · BUSINESS ADMINISTRATION</div>
+    <h1>赵圣光</h1><p class="korean-name">조성광</p>
+    <p class="lead cn">你好！我是富川加图立大学经营学专业的插班生。这里记录我的课程学习、项目实践与个人成长。</p>
+    <p class="lead kr">안녕하세요. 가톨릭대학교 경영학과 편입생 조성광입니다. 이곳에 수업 학습, 프로젝트 실습과 성장 과정을 기록합니다.</p>
+    <div class="pills"><span class="pill">富川加图立大学 · 가톨릭대학교</span><span class="pill">经营学 · 경영학</span><span class="pill">插班生 · 편입생</span></div>
+    <div class="actions"><a class="btn" href="#projects"><span class="cn">查看课程项目</span><span class="kr">프로젝트 보기</span></a><a class="btn secondary" href="#about"><span class="cn">了解我</span><span class="kr">소개 보기</span></a></div>
+  </div>
+  <div class="scene">
+    <div class="float-note">TODAY'S NOTE ✦<br><span class="cn">持续学习，持续进步</span><span class="kr">꾸준히 배우고 성장하기</span></div>
+    <div class="scene-motion" id="sceneMotion">
+      <div class="scene-card">
+        <svg viewBox="0 0 460 330" role="img" aria-label="学习工作室插画">
+          <ellipse cx="230" cy="292" rx="178" ry="18" fill="#dce4d4"/>
+          <rect x="55" y="70" width="104" height="105" rx="8" fill="#d7c9aa"/><path d="M55 105h104M55 140h104" stroke="#b69f7b" stroke-width="5"/>
+          <rect x="74" y="42" width="26" height="27" rx="3" fill="#8da88c"/><rect x="108" y="32" width="28" height="37" rx="3" fill="#d18a6b"/>
+          <rect x="173" y="75" width="105" height="78" rx="8" fill="#234d3c"/><rect x="181" y="83" width="89" height="61" rx="4" fill="#e8efe2"/>
+          <path d="M190 128l19-20 17 10 18-25 17 9" fill="none" stroke="#6b9c79" stroke-width="5" stroke-linecap="round"/>
+          <rect x="291" y="66" width="104" height="87" rx="8" fill="#234d3c"/><rect x="299" y="74" width="88" height="70" rx="4" fill="#e8efe2"/>
+          <rect x="312" y="112" width="12" height="23" fill="#9ab99a"/><rect x="334" y="96" width="12" height="39" fill="#6d9c7a"/><rect x="356" y="84" width="12" height="51" fill="#d18a6b"/>
+          <path d="M92 205h280l-17 18H108z" fill="#b98f65"/><path d="M112 220v63M350 220v63" stroke="#8f6c4c" stroke-width="9"/>
+          <rect x="203" y="177" width="65" height="54" rx="22" fill="#6d9677"/><circle cx="235" cy="157" r="34" fill="#e9b995"/><path d="M203 151q4-39 36-34 25 4 29 30-23-14-65 4" fill="#4c4035"/>
+          <circle cx="223" cy="159" r="3" fill="#3e3a32"/><circle cx="247" cy="159" r="3" fill="#3e3a32"/><path d="M228 173q8 7 15 0" fill="none" stroke="#a45f54" stroke-width="2" stroke-linecap="round"/>
+          <path d="M210 227l-10 45M258 227l10 45" stroke="#6d9677" stroke-width="9" stroke-linecap="round"/>
+          <path d="M190 279h90" stroke="#526d5a" stroke-width="7" stroke-linecap="round"/><path d="M235 274v18" stroke="#526d5a" stroke-width="7"/>
+          <path d="M390 205q-25-48 8-75 15 35-8 75" fill="#7eaa7a"/><path d="M394 207q-8-50 32-58 0 40-32 58" fill="#9abb86"/><path d="M394 210v44" stroke="#688c62" stroke-width="5"/>
+          <rect x="300" y="197" width="27" height="22" rx="5" fill="#d18a6b"/><path d="M327 202q16-3 12 12h-12" fill="none" stroke="#d18a6b" stroke-width="5"/>
+          <circle cx="75" cy="244" r="5" fill="#d18a6b"/><circle cx="380" cy="45" r="5" fill="#d18a6b"/>
+        </svg>
+        <div class="scene-caption"><span>A LITTLE STUDY STUDIO</span><span>✦ 2026</span></div>
+      </div>
+    </div>
+    <button class="pause" id="pauseBtn" type="button">Ⅱ <span class="cn">暂停动态</span><span class="kr">움직임 멈춤</span></button>
+  </div>
+</section>
+
+<section id="about" style="background:#fbf8f0">
+<div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">01 · ABOUT ME</div><h2><span class="cn">关于我</span><span class="kr">나를 소개합니다</span></h2></div><p><span class="cn">用真实经历介绍自己。</span><span class="kr">실제 경험을 바탕으로 소개합니다.</span></p></div>
+  <div class="about-grid">
+    <div class="panel"><h3><span class="cn">个人简介</span><span class="kr">기본 소개</span></h3><p class="cn">我目前就读于富川加图立大学经营学专业。通过课程学习与实践任务，逐步积累经营管理、国际经营和信息系统相关知识。</p><p class="kr">가톨릭대학교 경영학과에서 공부하고 있습니다. 수업과 실습을 통해 경영관리, 국제경영, 정보시스템 관련 지식을 쌓고 있습니다.</p></div>
+    <div class="panel"><h3><span class="cn">基本信息</span><span class="kr">기본 정보</span></h3><div class="info-list">
+      <b>姓名 / 이름</b><span>赵圣光 / 조성광</span>
+      <b>学校 / 학교</b><span>富川加图立大学 / 가톨릭대학교</span>
+      <b>专业 / 전공</b><span>经营学 / 경영학</span>
+      <b>身份 / 구분</b><span>插班生 / 편입생</span>
+      <b>关注领域 / 관심</b><span class="cn">经营管理、国际经营、数据与信息系统</span><span class="kr">경영관리, 국제경영, 데이터와 정보시스템</span>
+    </div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">02 · PROJECTS</div><h2><span class="cn">课程项目与实践</span><span class="kr">수업 프로젝트와 실습</span></h2></div><p><span class="cn">展示问题、职责、方法与收获。</span><span class="kr">문제, 역할, 방법과 배움을 정리합니다.</span></p></div>
+  <div class="cards">
+    <article class="project"><div class="num">PROJECT 01</div><h3><span class="cn">国际经营案例分析</span><span class="kr">국제경영 사례 분석</span></h3><p class="cn">围绕企业海外经营中的跨文化管理问题，梳理文化冲突、应对措施与团队合作建议。</p><p class="kr">기업의 해외经营 과정에서 발생하는 문화 차이와 갈등 대응 방안, 협력 방안을 분석합니다.</p><button data-project="0"><span class="cn">查看项目说明 →</span><span class="kr">프로젝트 설명 보기 →</span></button></article>
+    <article class="project"><div class="num">PROJECT 02</div><h3><span class="cn">Excel 财务计算练习</span><span class="kr">Excel 재무 계산 실습</span></h3><p class="cn">使用 Excel 内置函数练习净现值（NPV）与内部收益率（IRR）的计算，并整理计算过程。</p><p class="kr">Excel 내장 기능을 활용해 순현재가치(NPV)와 내부수익률(IRR)을 계산하고 과정을 정리합니다.</p><button data-project="1"><span class="cn">查看项目说明 →</span><span class="kr">프로젝트 설명 보기 →</span></button></article>
+    <article class="project"><div class="num">PROJECT 03</div><h3><span class="cn">经营信息论学习整理</span><span class="kr">경영정보론 학습 정리</span></h3><p class="cn">围绕数据库、Web 特征等课程知识点进行归纳，制作复习题与知识说明。</p><p class="kr">데이터베이스, 웹의 특성 등 수업 내용을 정리하고 복습 문제와 개념 설명을 구성합니다.</p><button data-project="2"><span class="cn">查看项目说明 →</span><span class="kr">프로젝트 설명 보기 →</span></button></article>
+  </div>
+</div></section>
+
+<section id="skills" style="background:#fbf8f0"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">03 · SKILLS</div><h2><span class="cn">学习技能</span><span class="kr">학습 역량</span></h2></div><p><span class="cn">后续可根据实际使用经验补充。</span><span class="kr">실제 활용 경험에 따라 계속 보완합니다.</span></p></div>
+  <div class="skill-grid">
+    <div class="skill"><span class="cn">经营学基础</span><span class="kr">경영학 기초</span><small>Business Administration</small></div>
+    <div class="skill"><span class="cn">Excel 基础计算</span><span class="kr">Excel 기초 계산</span><small>NPV · IRR 연습</small></div>
+    <div class="skill"><span class="cn">案例分析</span><span class="kr">사례 분석</span><small>Case Study</small></div>
+    <div class="skill"><span class="cn">中韩双语学习</span><span class="kr">중국어·한국어 학습</span><small>Bilingual Learning</small></div>
+  </div>
+</div></section>
+
+<section id="activities"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">04 · ACTIVITIES</div><h2><span class="cn">学习活动记录</span><span class="kr">학습 활동 기록</span></h2></div><p><span class="cn">记录学习过程与阶段性成果。</span><span class="kr">학습 과정과 결과를 기록합니다.</span></p></div>
+  <div class="panel"><div class="timeline">
+    <article><h3><span class="cn">经营学专业课程学习</span><span class="kr">경영학 전공 수업</span></h3><p><span class="cn">学习国际经营、经营信息论等课程内容，完成课堂练习与案例分析。</span><span class="kr">국제경영, 경영정보론 등의 수업을 듣고 실습과 사례 분석을 진행합니다.</span></p></article>
+    <article><h3><span class="cn">个人作品集网站制作</span><span class="kr">개인 포트폴리오 웹사이트 제작</span></h3><p><span class="cn">使用生成式 AI 编写 HTML，并通过 GitHub Pages 发布个人作品集。</span><span class="kr">생성형 AI로 HTML을 작성하고 GitHub Pages로 개인 포트폴리오를 공개합니다.</span></p></article>
+    <article><h3><span class="cn">持续完善作品内容</span><span class="kr">포트폴리오 지속 개선</span></h3><p><span class="cn">根据真实课程成果补充项目说明、截图与相关资料。</span><span class="kr">실제 수업 결과를 바탕으로 프로젝트 설명과 자료를 추가합니다.</span></p></article>
+  </div></div>
+</div></section>
+
+<section id="contact" style="padding-top:30px"><div class="wrap contact-grid">
+  <div><div class="eyebrow">05 · CONTACT</div><h2 style="font-size:38px;color:var(--green);line-height:1.2"><span class="cn">保持联系</span><span class="kr">연락하기</span></h2><p style="color:var(--muted);font-size:14px"><span class="cn">欢迎交流课程学习与项目实践。正式发布前，请填写你愿意公开的联系方式。</span><span class="kr">수업과 프로젝트에 대해 소통할 수 있습니다. 공개해도 되는 연락처를 입력한 뒤 게시하세요.</span></p></div>
+  <div class="contact-card"><h3>赵圣光 · 조성광</h3><p><span class="cn">富川加图立大学 · 经营学专业</span><span class="kr">가톨릭대학교 · 경영학과</span></p><p>Contact: <strong>请替换为你的公开邮箱 / 공개 이메일로 변경하세요</strong></p><p style="font-size:11px">※ <span class="cn">请勿填写学号、家庭住址、密码等私人信息。</span><span class="kr">학번, 집 주소, 비밀번호 등 개인정보를 공개하지 마세요.</span></p></div>
+</div></section>
+</main>
+<footer class="wrap"><strong>SG PORTFOLIO · 赵圣光 / 조성광</strong><span>© 2026 · <span class="cn">个人作品集</span><span class="kr">개인 포트폴리오</span></span></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-box"><button class="close" id="closeModal" aria-label="关闭">×</button><h3 id="modalTitle"></h3><p id="modalText"></p><p style="font-size:12px;color:#8a6b57">※ <span class="cn">请在提交前补充真实的个人职责、成果和证明材料。</span><span class="kr">제출 전 실제 역할, 결과와 근거 자료를 추가하세요.</span></p></div></div>
+
+<script>
+const body=document.body, langBtn=document.getElementById('langBtn');
+langBtn.addEventListener('click',()=>{body.classList.toggle('show-kr');langBtn.textContent=body.classList.contains('show-kr')?'中文':'한국어';});
+const details=[
+['国际经营案例分析 / 국제경영 사례 분석','分析海外经营中可能出现的语言沟通、价值观差异、管理方式差异等问题，并提出跨文化培训、沟通机制和本地化管理建议。请补充课堂作业中的具体案例、个人分工和最终结论。'],
+['Excel 财务计算练习 / Excel 재무 계산 실습','使用 Excel 的 NPV、IRR 等功能进行财务计算练习。建议在此处补充题目条件、现金流数据、计算公式、结果截图，以及你对结果的解释。'],
+['经营信息论学习整理 / 경영정보론 학습 정리','整理课程中的数据库、Web 特征等知识点，并通过练习题检验理解。建议补充具体章节、自己制作的题目或学习成果链接。']
+];
+document.querySelectorAll('[data-project]').forEach(btn=>btn.addEventListener('click',()=>{const d=details[Number(btn.dataset.project)];document.getElementById('modalTitle').textContent=d[0];document.getElementById('modalText').textContent=d[1];document.getElementById('modal').classList.add('show');}));
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+document.getElementById('closeModal').addEventListener('click',closeModal);
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+const scene=document.getElementById('sceneMotion'), pauseBtn=document.getElementById('pauseBtn');
+let paused=window.matchMedia('(prefers-reduced-motion: reduce)').matches, raf=0, start=performance.now();
+function animate(now){if(!paused){const y=Math.sin((now-start)/1100)*5;scene.style.transform=`translateY(${y}px)`;}raf=requestAnimationFrame(animate)}
+if(!paused)raf=requestAnimationFrame(animate);
+pauseBtn.addEventListener('click',()=>{paused=!paused;if(paused){cancelAnimationFrame(raf);scene.style.transform='none';pauseBtn.textContent='▶ 继续动态'}else{start=performance.now();raf=requestAnimationFrame(animate);pauseBtn.textContent='Ⅱ 暂停动态'}});
+const canHover=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+if(canHover){document.querySelector('.scene').addEventListener('mousemove',e=>{if(paused)return;const r=e.currentTarget.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;scene.style.transform+=` rotateX(${(-y*4).toFixed(2)}deg) rotateY(${(x*4).toFixed(2)}deg)`;});document.querySelector('.scene').addEventListener('mouseleave',()=>{if(!paused)scene.style.transform='';});}
+document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(raf)}else if(!paused){start=performance.now();raf=requestAnimationFrame(animate)}});
+</script>
+</body>
+</html>
